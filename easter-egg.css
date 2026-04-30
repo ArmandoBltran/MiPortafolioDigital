@@ -1,0 +1,247 @@
+/* Easter Egg - Dino Game Styles */
+
+.easter-egg-word {
+    cursor: pointer;
+}
+
+/* Game Container */
+.easter-egg-game-container {
+    margin: 16px 0 6px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff8f9 0%, #ffeef1 100%);
+    border-radius: 10px;
+    border: 1px solid #ebccd1;
+    box-shadow: 0 8px 22px rgba(128, 21, 39, 0.14);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(126, 22, 40, 0.1);
+    font-family: 'Courier New', monospace;
+}
+
+.game-high-score,
+.game-score {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5f1523;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.game-high-score {
+    margin-right: auto;
+}
+
+.score-label {
+    font-size: 12px;
+    display: block;
+    color: #999;
+}
+
+.score-value {
+    font-size: 18px;
+    display: block;
+    color: #5f1523;
+}
+
+.game-close-btn {
+    background: #f7f7f7;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.game-retry-btn {
+    background: #8c1325;
+    color: #fff;
+    border: 2px solid #8c1325;
+    border-radius: 8px;
+    height: 36px;
+    padding: 0 14px;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 16px;
+}
+
+.game-mode-btn {
+    background: #f7f7f7;
+    color: #1f2c3b;
+    border: 2px solid #c9d2dc;
+    border-radius: 8px;
+    height: 36px;
+    padding: 0 12px;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 12px;
+}
+
+.game-mode-btn:hover {
+    background: #e8eef5;
+    border-color: #8fa3b7;
+}
+
+.game-status-message {
+    margin: 8px 4px 14px;
+    min-height: 20px;
+    font-size: 13px;
+    color: #2d4460;
+    font-weight: 600;
+}
+
+.game-retry-btn:hover {
+    background: #6c0f1e;
+    border-color: #6c0f1e;
+    transform: translateY(-1px);
+}
+
+.game-retry-btn:active {
+    transform: translateY(0);
+}
+
+.game-close-btn:hover {
+    background: #efefef;
+    border-color: #999;
+    transform: scale(1.05);
+}
+
+.game-close-btn:active {
+    transform: scale(0.95);
+}
+
+/* Canvas Styles */
+#game-canvas {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: #f7f7f7;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .easter-egg-game-container {
+        margin: 14px 0 6px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .game-header {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+
+    .game-high-score,
+    .game-score {
+        font-size: 14px;
+    }
+
+    .score-value {
+        font-size: 16px;
+    }
+
+    .game-close-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .game-retry-btn {
+        height: 32px;
+        font-size: 12px;
+        padding: 0 10px;
+        margin-left: auto;
+    }
+
+    .game-mode-btn {
+        height: 32px;
+        font-size: 11px;
+        padding: 0 10px;
+        margin-left: 0;
+    }
+
+    #game-canvas {
+        border-width: 2px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-header {
+        padding: 10px 12px;
+    }
+
+    .game-high-score,
+    .game-score {
+        font-size: 12px;
+    }
+
+    .score-label {
+        font-size: 10px;
+    }
+
+    .score-value {
+        font-size: 14px;
+    }
+
+    .game-close-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+
+    .game-retry-btn {
+        height: 28px;
+        font-size: 11px;
+        padding: 0 9px;
+    }
+
+    #game-canvas {
+        border-width: 2px;
+    }
+}

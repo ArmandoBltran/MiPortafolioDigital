@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="easter-egg.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <h1 class="logo">Juan Armando Santoscoy Beltrán</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-layout">
+        <figure class="profile-photo-frame">
+          <img src="foto-perfil.jpeg" alt="Fotografia de Juan Armando Santoscoy Beltrán" class="profile-photo" />
+          <figcaption>Juan Armando Santoscoy Beltrán</figcaption>
+        </figure>
+
+        <div class="hero-content">
+          <span class="hero-badge">Desarrollador Web</span>
+          <h2>Portafolio digital</h2>
+          <p>Diseño y desarrollo soluciones web modernas, claras y funcionales.</p>
+          <button class="btn" id="open-projects-carousel" type="button">Ver proyectos recientes</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h3>Sobre mi</h3>
+      <p class="section-text about-intro">
+        Tecnico en Programacion con bases solidas en logica y desarrollo de software.
+        Proactivo, con interes en mejorar continuamente y adquirir experiencia en entornos profesionales del area tecnologica.
+      </p>
+
+      <div class="about-experience">
+        <h4>Experiencia laboral</h4>
+
+        <article class="experience-item">
+          <h5>Disenador UX/UI y Frontend</h5>
+          <p class="experience-meta">Universidad Carolina - Proyecto de Investigacion</p>
+          <p class="experience-date">Septiembre 2025 - Abril 2026</p>
+          <ul>
+            <li>Desarrollo de pagina web universitaria enfocada en la gestion de informacion.</li>
+            <li>Implementacion de HTML, CSS, JavaScript, PHP y MySQL en Visual Studio Code.</li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <h5>Desarrollador de Aplicacion Movil</h5>
+          <p class="experience-meta">Universidad Carolina - Aplicacion de Foros Anonimos</p>
+          <p class="experience-date">Abril 2026</p>
+          <ul>
+            <li>Desarrollo de aplicacion para interaccion anonima entre usuarios.</li>
+            <li>Implementacion de sistema de publicaciones y visualizacion de contenido.</li>
+            <li>Uso de MIT App Inventor para prototipado y desarrollo.</li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <h5>Desarrollador Independiente</h5>
+          <p class="experience-meta">Proyectos Personales</p>
+          <p class="experience-date">Enero 2026 - Abril 2026</p>
+          <ul>
+            <li>Creacion de minijuego tipo Google Dino estilo navegador.</li>
+            <li>Implementacion de logica de juego, deteccion de colisiones y puntuacion.</li>
+            <li>Desarrollo de proyectos adicionales para practica y mejora continua.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h3>Proyectos</h3>
+      <p class="section-text">Estos son mis 3 proyectos principales: web universitaria, app movil y minijuego interactivo.</p>
+      <div class="projects">
+        <article class="card">
+          <h4>Pagina Web Universitaria</h4>
+          <p>Sitio institucional orientado a informacion academica y experiencia de estudiantes.</p>
+          <a class="slide-link" href="https://www.ucampus.lat" target="_blank" rel="noopener noreferrer">Visitar ucampus.lat</a>
+        </article>
+        <article class="card">
+          <h4>Voces Anonimas (MIT App Inventor)</h4>
+          <p>Aplicacion movil con demo en video y descarga directa del APK.</p>
+          <a class="slide-link" href="VocesAnonimas.apk" download="VocesAnonimas.apk">Descargar APK</a>
+        </article>
+        <article class="card">
+          <h4>Minijuego Dino de Google</h4>
+          <p>Adaptacion del clasico juego del dino integrada como easter egg en el portafolio.</p>
+          <button class="btn secondary-btn open-carousel-trigger" type="button" data-slide="2">Jugar desde carrusel</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h3>Contacto</h3>
+      <p class="section-text">Disponible para colaboraciones, proyectos freelance y mejoras de sitios existentes.</p>
+      <div class="contact-links">
+        <a href="mailto:juansantoscoy72@gmail.com">Correo: juansantoscoy72@gmail.com</a>
+        <a href="tel:+528447761871">Telefono: +52 844 776 1871</a>
+        <p>Domicilio: Ciudad Mirasierra 1era Etapa, Calle 21 #548, Saltillo, Coahuila, Mexico.</p>
+        <a href="https://github.com/ArmandoBltran" target="_blank" rel="noopener noreferrer">GitHub: ArmandoBltran</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>2026 - Juan Armando Santoscoy Beltrán</p>
+  </footer>
+
+  <div class="carousel-modal" id="projects-carousel-modal" aria-hidden="true">
+    <div class="carousel-backdrop" id="close-carousel"></div>
+    <section class="carousel-panel" role="dialog" aria-modal="true" aria-label="Carrusel de proyectos">
+      <header class="carousel-header">
+        <h3>Proyectos recientes</h3>
+        <button class="carousel-close" id="close-carousel-btn" type="button" aria-label="Cerrar carrusel">&times;</button>
+      </header>
+
+      <div class="carousel-track" id="carousel-track">
+        <article class="carousel-slide is-active" data-slide="0">
+          <span class="slide-label">Proyecto 1</span>
+          <h4>Pagina Web Universitaria</h4>
+          <p>Plataforma web institucional orientada a informacion academica y experiencia de estudiante.</p>
+          <div class="web-viewer-wrapper">
+            <iframe
+              class="web-viewer"
+              src="https://www.ucampus.lat"
+              title="Visor web de uCampus"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="fullscreen"
+            ></iframe>
+          </div>
+          <p class="viewer-note">Si el visor no carga, el sitio bloquea iframes por seguridad. Usa el enlace directo.</p>
+          <a class="slide-link" href="https://www.ucampus.lat" target="_blank" rel="noopener noreferrer">Abrir sitio: ucampus.lat</a>
+        </article>
+
+        <article class="carousel-slide" data-slide="1">
+          <span class="slide-label">Proyecto 2</span>
+          <h4>Voces Anonimas - MIT App Inventor</h4>
+          <p>Prototipo movil desarrollado con MIT App Inventor. Demo en video integrada en el portafolio.</p>
+          <div class="app-demo-wrapper">
+            <video class="app-demo-video" controls autoplay muted loop>
+              <source src="WhatsApp Video 2026-04-30 at 12.57.57 PM.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+          </div>
+          <div class="slide-actions">
+            <a class="slide-link" href="VocesAnonimas.apk" download="VocesAnonimas.apk">Descargar APK: VocesAnonimas</a>
+          </div>
+        </article>
+
+        <article class="carousel-slide" data-slide="2">
+          <span class="slide-label">Proyecto 3</span>
+          <h4>Minijuego Dino de Google</h4>
+          <p>Version adaptada del juego del dino como easter egg integrado al portafolio.</p>
+          <button class="btn secondary-btn" id="open-dino-game" type="button">Jugar minijuego</button>
+          <div id="dino-game-mount"></div>
+        </article>
+      </div>
+
+      <footer class="carousel-controls">
+        <button class="nav-btn" id="prev-slide" type="button" aria-label="Proyecto anterior">Anterior</button>
+        <div class="carousel-dots" role="tablist" aria-label="Seleccion de proyecto">
+          <button class="dot is-active" type="button" data-target="0" aria-label="Ir al proyecto 1"></button>
+          <button class="dot" type="button" data-target="1" aria-label="Ir al proyecto 2"></button>
+          <button class="dot" type="button" data-target="2" aria-label="Ir al proyecto 3"></button>
+        </div>
+        <button class="nav-btn" id="next-slide" type="button" aria-label="Proyecto siguiente">Siguiente</button>
+      </footer>
+    </section>
+  </div>
+
+  <script>
+    const modal = document.getElementById('projects-carousel-modal');
+    const openBtn = document.getElementById('open-projects-carousel');
+    const closeBackdrop = document.getElementById('close-carousel');
+    const closeBtn = document.getElementById('close-carousel-btn');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    const prevBtn = document.getElementById('prev-slide');
+    const nextBtn = document.getElementById('next-slide');
+    let currentSlide = 0;
+
+    const showSlide = (index) => {
+      currentSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === currentSlide));
+      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === currentSlide));
+    };
+
+    const openCarousel = () => {
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      showSlide(currentSlide);
+    };
+
+    const closeCarousel = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+    };
+
+    openBtn.addEventListener('click', openCarousel);
+    document.querySelectorAll('.open-carousel-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const target = Number(trigger.dataset.slide || 0);
+        showSlide(target);
+        openCarousel();
+      });
+    });
+    closeBackdrop.addEventListener('click', closeCarousel);
+    closeBtn.addEventListener('click', closeCarousel);
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const target = Number(dot.dataset.target || 0);
+        showSlide(target);
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeCarousel();
+      if (event.key === 'ArrowLeft') showSlide(currentSlide - 1);
+      if (event.key === 'ArrowRight') showSlide(currentSlide + 1);
+    });
+
+    document.getElementById('open-dino-game').addEventListener('click', () => {
+      if (window.startDinoGame) {
+        window.startDinoGame();
+      }
+    });
+  </script>
+  <script src="animations.js"></script>
+  <script src="easter-egg.js"></script>
+
+</body>
+</html>
